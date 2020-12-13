@@ -27,17 +27,29 @@
   <div class = "row">
     <div class = "col-md-12">
       <br>
-      <center><h3> Commercialisation and Indian Media </h3></center><br>
+      <center><h3> Commercialisation and Indian Media </h3></center>
    
       <i> <center> By Sonal Chandra, Irsa Bibi, and Ranveet Kaur</center> </i>
     </div>
+  </div>
+    <br>
+    <div class= "row">
+      <h4>Introduction</h4>
+      <p>
+        This project is aimed at discussing the impact of commercialisation on news show contents. In the modern day attention economy the longer a user tunes to a particular news channel, the more profitable it is for the channels. Such an economy promotes sensationalism as the profit-making media firms are incentivized to present sensational headlines and stories to capture people’s attention. In this project, we discuss some of the underlying features that determine the reported truth. We use LDAvis to model the topics of mainstream Indian English news shows, which are highly commercialised. We then use the generated visualization to analyze the topics and discuss problems of such journalism, before concluding our project.  
+      </p>
+
+
+
+
+    </div>
  
 
-  </div>
+
       <div class = "row">
     <div class = "col-md-12">
       <br>
-      <center><h5> Topic Modelling of 11 Mainstream English News Shows in India </h5></center>
+      <center><h5> <i>Topic Modelling of 11 Mainstream English News Shows in India </i> </h5></center>
     </div>
  
 
@@ -389,8 +401,78 @@ if(typeof(LDAvis) !== "undefined"){
         <br>
         <br>
         <br>
-       
 
+        <div class = "container">
+        
+    
+            <div class= "row">
+              <h4>Latent Dirichlet Allocation Visualization (LDAvis) and Word Cloud Analysis </h4>
+              <br>
+              <p>
+                The above visualization presents an analysis of 11 mainstream English news shows in India. We analyze the YouTube video titles of the shows. The data was collected in July 2020 from the official YouTube playlists of the individual news shows. Different news shows had videos from different time periods available on their YouTube playlists. Most of the playlists included videos from 2017 to July 2020 though. The right hand side of the LDAvis contains a two-dimensional clustering of all the individual words in all the video titles of all the shows. We use Sievert and Shirley (2014)’s algorithm called LDAvis to categorize words under four different topics. The name of the topics are represented by the number on the circles (1,2,3, and 4). Each ‘topic’ contains a set of words that describe that ‘topic’. The distance between the centres of  each circle represents the difference in the corresponding topics. Also, the size of each circle indicates the proportion of data included in that topic. For instance, circle 1, i.e, topic 1 is the biggest and contains 72.1% of the dataset. Since circles 1 and 3 are closer together and circles 1 and 2 are farther apart, we can say that topics 1 and 3 are quite similar whereas topics 1 and 2 are quite different from each other. 
+              </p>
+              <p>
+                Moreover, when a circle gets clicked, the horizontal bar chart gets populated with the 30 most ‘relevant’ terms for that topic. The red bars over the blue bars show the contribution of each term made by the clicked topic to the dataset. For instance, after clicking on topic 2, we see “covid” as the most relevant term. We can also see that the term “covid” appeared approximately 90 times in topic 2 and approximately 290 times in the whole dataset. When no circles are clicked, i.e., no topic is selected, then the horizontal bar chart at the right hand side shows the top 30 most ‘salient’ terms in the whole dataset. One can also explore the source of each term on the horizontal bar chart by hovering the pointer over that term. As one hovers the pointer over a term the sizes of the circles change dynamically and indicate in which topic(s) the term appeared in. The larger the circle becomes the higher is the corresponding topic’s contribution of that term to the dataset. Please refer to Chung et. al. (2012),and Sievert and Shirley (2014) for the formulae of ‘saliency’ and ‘relevance’ respectively. 
+
+              </p>
+              <p>
+                From a brief analysis of the LDAvis we can see that some of the most salient terms used in the titles of the Indian mainstream English news shows are “cong” (referring to the leader of opposition Indian National Congress), “modi” (referring to the Indian Prime Minister Narendra Modi), ”bjp” (referring to the ruling party BJP), “covid”, “china”, “gandhi” (referring to dominant Gandhi family in the Indian National Congress )etc. Also, about 82% of the data is categorized as topics 1 and 3, which also have quite similar top 30 relevant terms. This shows the monochromatic nature of Indian English mainstream news shows.
+
+              </p>
+              <p>
+                The time period that the dataset covers is important. From Jan 2017 to July 2020, Indian economy showed a declining trend, India’s spending on healthcare declined, unemployment figures were on all time high, India had it's 17th general election (GDP Growth (annual %), 2020; 2020; Current health expenditure (% of GDP), 2020; Unemployment rate at 45-year high, confirms Labour Ministry data, 2019). The years were also punctuated by banking crises including that of Punjab National Bank and Infrastructure Leasing & Financial Banking (IL&FS) (Roy, 2018; Business Standard, 2019  ) . Then, in early 2020, India was hit by the COVID-19 pandemic. With that backdrop, absence of terms like “economy” , “growth”, ”healthcare” , “poverty”, “unemployment”, “education”, “development”, “bank” from the majority of the data set is worth noting. The term “economy” does appear in the top 30 most relevant terms of topic 2 which only contains 13.5% of the dataset. This provides evidence for lack of focus on the aforementioned issues in Indian mainstream English news shows. Considering the news channels in question are profit maximizing firms, one possible explanation behind focussing on topics like the opposition party and it's leaders, the Prime Minister, China, Pakistan could be to create sensational headlines and stories that attract more views. Another interesting term that corroborates this explanation is the popularity of the term “expose” in the dataset. This explanation, however, assumes that such topics do attract an audience and the absent topics do not. This further begs the question why topics like “poverty”, “healthcare”, “unemployment” do not attract an audience. Perhaps, topics like China, Pakistan, Modi, BJP are a way to divert public’s attention from the aforementioned topics. Such diversion not only hints towards vested direct or indirect political interests of the news channels with the government, but also the popular topics among mainstream Indian audiences. 
+
+              </p>
+              <p>
+                LDAvis, however, does not say anything about the context in which a particular term is being used. Nor does it tell us anything about which news show emphasizes on which term. So, in an attempt to pin-point the news shows that are contributing to topics 1 and 3 and the news shows that are contributing to topics 2 and 4, we generated word-clouds of all the news shows in the data-set. It is clear from the word clouds that except the show The Interview with Karan Thapar at news channel The Wire, for all mainstream news shows terms like “modi”, “china”, “pak” (referring to Pakistan), “cong”, “gandhi” etc. Terms like “government”, “economy”, “poor”, “minister”, “economic”,”crisis” are largely contributed by the show The Interview with Karan Thapar to the dataset. This again shows the largely monochromatic nature of Indian English news media landscape.
+
+              </p>
+          
+        
+        
+        
+            </div>
+            <div class = "row">
+              <h4>Problems with such journalism</h4> <br>
+              <p>
+            
+                  <!-- add content here -->
+                
+              </p>
+              <br>
+              <h4>Conclusion</h4> 
+              <p>
+              
+                  <!-- add content here -->
+
+              </p>
+              <h4>Bibliography</h4> 
+              <p>
+                
+                  <!-- add content here -->
+
+              </p>
+
+            </div>
+         
+        
+          
+        </div>
+       
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
